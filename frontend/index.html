@@ -11,7 +11,8 @@
 
     <!-- JS -->
     <script defer src="src/index.js" charset="utf-8"></script>
-
+    <script defer src="src/categoryDropDownMenu.js" charset="utf-8"></script>
+    <script defer src="src/search.js" charset="utf-8"></script>
     <title>Cheer You Up App</title>
 
 </head>
@@ -25,82 +26,52 @@
             Cheer You Up App
         </a>
     </nav>
-    <div id="container">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-4 ">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="kitty" class="btn btn-info">Cat</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="doggie" class="btn btn-info">Dog</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="personalImage" class="btn btn-info">Personalized Pics</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="uploadBtn" class="btn btn-info">Upload a Pic</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div id="image" class="col-8 ">
-                    <img src="img/cat.jpg" alt="cat place hold image" />
-                    <p>Press the button for more pics or upload one</p>
-                    <div class="row">
-                        <div class="col-6  ">
-                            <p><button id="next" class="btn btn-success">next</button></p>
-                        </div>
-                        <div class="col-6  ">
-                            <p><button id="previous" class="btn btn-success">previous</button></p>
-                        </div>
-                    </div>
-                </div>
+    <br>
 
-                <div class="col-4">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="ramdon-quote" class="btn btn-info">A Chuck Norris quote!</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="geekJokes" class="btn btn-info">A Geek joke</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="personalJoke" class="btn btn-info">Personalized Joke</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <button id="newJoke" class="btn btn-info">Submit new joke</button>
-                        </div>
-                    </div>
-                </div>
+    <!-- <div class="col">
+        <buttom value="Submit" class="btn btn-primary" id="kitty">Cats</buttom>
+        <buttom value="Submit" class="btn btn-primary" id="doggie">Dogs</buttom>
+        <buttom value="Submit" class="btn btn-primary" id="geekJokes">Jokes</buttom>
+    </div> -->
 
-                <div id="quotes" class="col-8">
-                    <p>
-                        Press the jokes button for a random sweet joke.
-                        Ps. Spoil alarm, the geek jokes contains Chuck Norris jokes too
-                    </p>
+
+    <!--radio buttom-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-2 ">
+                <!-- limit imput -->
+                <form id="">
+                    <label for="catQtd">Quantity</label>
+                    <input class="form-control" type="text" name="qtd" id='catQtd' required="true" value="1 to 100" onfocus="this.value=''">
+                </form>
+                <br>
+                
+                <!-- dropdown button -->
+                <form id="">
+                    <label for="animalclass">Cats Categories</label>
+                    <select class="form-control" id="catCategory">
+                    </select>
+
+                    <br>
+                    <button type="button" class="btn btn-success" id="searchBtn">Search</button>
+                </form>
+
+                
+            </div>
+
+            <div class="col-sm-10 ">
+                <div id="display">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore veritatis quod consectetur
+                        cupiditate, aut eum nobis ipsum ut ullam, praesentium placeat, recusandae sint sequi dolore
+                        possimus
+                        laborum. Iure, beatae recusandae?</p>
                 </div>
             </div>
+
         </div>
     </div>
-
-    <br />
-
-
-
 
     <!--
         <div>
@@ -136,10 +107,11 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
     </div>
     <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+
+</footer>
+<!-- Footer -->
+
 </html>
