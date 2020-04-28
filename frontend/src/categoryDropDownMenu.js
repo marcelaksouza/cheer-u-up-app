@@ -17,7 +17,6 @@ dropdown.selectedIndex = 0;
     fetch('https://api.thecatapi.com/v1/categories', requestOptions)
         .then(res => res.json())
         .then(categories => {
-            console.log(categories)
             createCatsTable(categories);
         }).catch((err) => console.log(err));
 

@@ -1,3 +1,4 @@
+window.onload=randomCat;
 
 // // let iconDiv = document.getElementById('icon')
 
