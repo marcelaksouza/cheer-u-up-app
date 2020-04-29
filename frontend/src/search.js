@@ -18,8 +18,8 @@ searchBtn.addEventListener("click", evt => {
         .then(res => res.json())
         .then(cats => {
             if(cats.length == 0){
-                displayDiv.innerHTML = `<p style="color:red;">Oh no... there is no matches for your search, try to let one of the fiels in blank, 
-                best luck next time. </p>`;
+                displayDiv.innerHTML = `<p style="color:red;">Oh no... There is kitties that match your criteria.. Try leave one of the feilds blank and try again. 
+                Best luck next time. </p>`;
                 
             }
             else{ 

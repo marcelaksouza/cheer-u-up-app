@@ -10,7 +10,7 @@ const getOneById = (id) => {
     fetch('https://api.thecatapi.com/v1/images/'+id,option)
         .then(res => res.json())
         .then(cat => {
-
+            console.log(cat);
             let content = "";
             content += `<img src=" ${cat.url}" class="img-fluid" alt="kitty pic" onclick="openModalfunction('${cat.id}')">`;
             document.getElementById("modal-content").innerHTML = content;

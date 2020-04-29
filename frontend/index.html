@@ -1,3 +1,5 @@
+<!-- API https://docs.thecatapi.com/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +23,7 @@
     <script defer src="src/categoryDropDownMenu.js" charset="utf-8"></script>
     <script defer src="src/deleteFavortite.js" charset="utf-8"></script>
     <script defer src="src/getOne.js" charset="utf-8"></script>
-    <script defer src="src/hoverModal.js" charset="utf-8"></script>
+    <script defer src="src/showModal.js" charset="utf-8"></script>
     <script defer src="src/loadFavorites.js" charset="utf-8"></script>
     <script defer src="src/postFavorite.js" charset="utf-8"></script>
     <script defer src="src/randonBtn.js" charset="utf-8"></script>
@@ -52,21 +54,24 @@
 
     <!-- start container-fluid  -->
     <div class="container-fluid">
-        <div class="row">
+        <div class="row text-center">
             <div class="col-sm-3 ">
                 <!-- Favorites -->
                 <img src="img/heart2.png" width="27" height="27" class="d-inline-block align-top" alt="">
+                <br>
+                <br>
                 <button type="button" class="btn btn-danger" id="favoriteBtn">View Favorites</button>
-                <br><br>
-
+                <br>
+                <hr>
+                
                 <!-- Qtd imput -->
                 <form id="">
-                    <label for="catQtd">Quantity</label>
+                    <label for="catQtd">Quantity </label>
                     <input class="form-control" type="text" name="qtd" id='catQtd' required="true" value="1 to 100"
                         onfocus="this.value=''">
                 </form>
                 <br>
-
+                <p>And</p>
                 <!-- dropdown button -->
                 <form id="">
                     <!-- Cats Categories dropdown  -->
@@ -74,7 +79,7 @@
                     <select class="form-control" id="catCategory">
                     </select>
                     <br>
-
+                    <p>Or</p>
                      <!-- Cats breeds dropdown  -->
                     <label for="">Cats Breeds</label>
                     <select class="form-control" id="catBreeds">
@@ -82,6 +87,12 @@
 
                     <br>
                     <button type="button" class="btn btn-success" id="searchBtn">Search</button>
+                    <br>
+                    <hr>
+                    
+
+                    <label for="">Random kitties and jokes</label>
+                    <button type="button" style="display: block;" class="btn btn-primary full-lenght-btn randomBtn" id="searchBtn">Random</button>
                 </form>
                 <br><br>
 
@@ -108,9 +119,7 @@
                 <div id="warning"></div>
                 <div id="display"></div>
                 <div id="quotes"></div>
-                <div id="random">
-                    <p><button class="btn btn-primary full-lenght-btn randomBtn">Next</button></p>
-                </div>
+                
             </div> 
             <!-- end isplay div  -->
 

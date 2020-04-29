@@ -1,5 +1,9 @@
 //reference https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
 function randomCat() {
+    let quotesDiv = document.getElementById('quotes');
+    if(quotesDiv.style.display == "none"){
+        unhideJokesDisplay();
+    }
     let imageDiv = document.getElementById('display');
 
     const option = {

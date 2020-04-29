@@ -1,7 +1,6 @@
 let favoriteBtn = document.getElementById('favoriteBtn');
 favoriteBtn.addEventListener("click", evt => {
 
-
     let displayDiv = document.getElementById('display');
 
     const option = {
@@ -27,7 +26,6 @@ favoriteBtn.addEventListener("click", evt => {
             catDisplay += `</div>`;
         })
         catDisplay += `</div>`;
-        console.log(catDisplay)
         displayDiv.innerHTML = catDisplay;
     }).catch((err) => console.log(err))
 
