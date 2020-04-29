@@ -1,4 +1,5 @@
-window.onload=randomCat;
+let element = document.querySelector('.randomBtn').click();
+console.log(element);
 
 // // let iconDiv = document.getElementById('icon')
 

@@ -1,7 +1,8 @@
-let quotesButton = document.getElementById('searchBtn');
+let searchBtn = document.getElementById('searchBtn');
 let displayDiv = document.getElementById('display');
 
-quotesButton.addEventListener("click", evt => {
+searchBtn.addEventListener("click", evt => {
+    hideJokesDisplay();
     let id = document.querySelector('#catCategory').value;
     let qtd = document.querySelector('#catQtd').defaultValue = "1";
     qtd = document.querySelector('#catQtd').value;

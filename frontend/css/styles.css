@@ -1,4 +1,4 @@
-
+/* reference: https://www.tutorialrepublic.com/faq/how-to-auto-resize-an-image-to-fit-into-a-div-container-using-css.php */
 .icon{
   width: 30px;
   height: 30px;
@@ -69,6 +69,17 @@ div{
     cursor: pointer;
   }
 
-  .image{
+  img{
+    max-width: 50%;
+    max-height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-  }
+.full-lenght-btn{
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+}
