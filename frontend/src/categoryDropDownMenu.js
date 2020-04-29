@@ -1,11 +1,7 @@
 //dropdown manu was adapted using is code reference 
 //https://www.codebyamir.com/blog/populate-a-select-dropdown-list-with-json
-let dropdown = document.getElementById('catCategory');
-let defaultOption = document.createElement('option');
-defaultOption.text = 'None';
-dropdown.add(defaultOption);
-dropdown.selectedIndex = 0;
-
+let dropdownCatCategory= document.getElementById('catCategory');
+let dropdownCatBreed= document.getElementById('catBreeds');
     const requestOptions = {
         method: 'GET',
         headers: {
@@ -13,16 +9,28 @@ dropdown.selectedIndex = 0;
             'x-api-key': "5e4b134f-fea1-4c4f-be86-2aabae37c132"
         }
     }
-
+    //dropdown cat's category
     fetch('https://api.thecatapi.com/v1/categories', requestOptions)
         .then(res => res.json())
         .then(categories => {
-            createCatsTable(categories);
+            createDropDownOptions(categories, dropdownCatCategory);
+        }).catch((err) => console.log(err));
+    
+    //dropdown cat's breed 
+    fetch('https://api.thecatapi.com/v1/breeds', requestOptions)
+        .then(res => res.json())
+        .then(breeds => {
+            createDropDownOptions(breeds, dropdownCatBreed);
         }).catch((err) => console.log(err));
 
 
+
  //add all cats pics to
-const createCatsTable = (categories) => {
+const createDropDownOptions = (categories, dropdown) => {
+    let defaultOption = document.createElement('option');
+    defaultOption.text = ' ';
+    dropdown.add(defaultOption);
+    dropdown.selectedIndex = 0;
 
     let option;
     

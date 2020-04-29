@@ -1,5 +1,6 @@
+//reference: https://stackoverflow.com/questions/25587762/javascript-click-on-element-by-class
 let element = document.querySelector('.randomBtn').click();
-console.log(element);
+
 
 // // let iconDiv = document.getElementById('icon')
 

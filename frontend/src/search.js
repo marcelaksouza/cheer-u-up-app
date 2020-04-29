@@ -1,22 +1,36 @@
 let searchBtn = document.getElementById('searchBtn');
 let displayDiv = document.getElementById('display');
 
+
 searchBtn.addEventListener("click", evt => {
+    //hide jokes 
     hideJokesDisplay();
-    let id = document.querySelector('#catCategory').value;
+    let categoryId = document.querySelector('#catCategory').value;
+    let breedId = document.querySelector('#catBreeds').value;
     let qtd = document.querySelector('#catQtd').defaultValue = "1";
     qtd = document.querySelector('#catQtd').value;
   
-    let query = "limit=" + qtd + "&category_ids=" + id;
+    let query = "limit=" + qtd + "&category_ids=" + categoryId +"&breed_id=" + breedId;
     console.log(query);
 
+    //get images
     fetch('https://api.thecatapi.com/v1/images/search?' + query)
         .then(res => res.json())
         .then(cats => {
-            buildCardDiv(cats)
+            if(cats.length == 0){
+                displayDiv.innerHTML = `<p style="color:red;">Oh no... there is no matches for your search, try to let one of the fiels in blank, 
+                best luck next time. </p>`;
+                
+            }
+            else{ 
+                buildCardDiv(cats);}
+           
+
         }).catch((err) => console.log(err))
 });
 
+
+//build cards from a array
 const buildCardDiv = (cats) => {
     let catDisplay = "";
     catDisplay += `<div class="card-columns">`;

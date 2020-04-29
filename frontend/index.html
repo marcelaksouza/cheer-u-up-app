@@ -5,16 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- start Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <!-- end Bootstrap CSS -->
+    <!-- start load CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Bootstrap CSS -->
+    <!-- end load CSS -->
 
-    <!-- JS -->
+    <!-- start JS -->
     <script defer src="src/helpers/isFavorite.js" charset="utf-8"></script>
     <script defer src="src/categoryDropDownMenu.js" charset="utf-8"></script>
     <script defer src="src/deleteFavortite.js" charset="utf-8"></script>
@@ -28,9 +30,9 @@
     <script defer src="src/uploadImage.js" charset="utf-8"></script>
     <script defer src="src/randomJoke.js" charset="utf-8"></script>
     <script defer src="src/index.js" charset="utf-8"></script>
-    <script defer src="src/hideJokes.js" charset="utf-8"></script>
+    <script defer src="src/helpers/hideJokes.js" charset="utf-8"></script>
     <!-- <script defer src="src" charset="utf-8"></script> -->
-    <!-- JS -->
+    <!-- end JS -->
 
 
     <title>Cheer You Up App</title>
@@ -38,7 +40,7 @@
 
 <body>
 
-    <!-- Image and text in navbar -->
+    <!-- start Image and text in navbar -->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="img/kitty.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -46,9 +48,9 @@
         </a>
     </nav>
     <br>
-    <!-- ------------------------ -->
+    <!-- end Image and text in navbar -->
 
-    <!--container-fluid  -->
+    <!-- start container-fluid  -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3 ">
@@ -67,17 +69,24 @@
 
                 <!-- dropdown button -->
                 <form id="">
-                    <label for="animalclass">Cats Categories</label>
+                    <!-- Cats Categories dropdown  -->
+                    <label for="">Cats Categories</label>
                     <select class="form-control" id="catCategory">
+                    </select>
+                    <br>
+
+                     <!-- Cats breeds dropdown  -->
+                    <label for="">Cats Breeds</label>
+                    <select class="form-control" id="catBreeds">
                     </select>
 
                     <br>
                     <button type="button" class="btn btn-success" id="searchBtn">Search</button>
                 </form>
-                <br>
+                <br><br>
 
                 <!-- start upload file -->
-                <form>
+                <!-- <form>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="uploadImage">
                         <label class="custom-file-label" for="customFile">Upload a cat</label>
@@ -90,19 +99,20 @@
                         var fileName = $(this).val().split("\\").pop();
                         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
                     });
-                </script>
+                </script> -->
             <!-- end upload file -->
-            </div>
-            
-            <!-- display div -->
+            </div> <!-- end of the form collun -->
+
+            <!--  display div -  new collun --->
             <div class="col-sm-9 ">
+                <div id="warning"></div>
                 <div id="display"></div>
                 <div id="quotes"></div>
                 <div id="random">
                     <p><button class="btn btn-primary full-lenght-btn randomBtn">Next</button></p>
                 </div>
-            </div>
-            <!----------------->
+            </div> 
+            <!-- end isplay div  -->
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -113,11 +123,12 @@
                     <div id="modal-content"></div>
                     <hr>
                     <div id="modal-form"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end container-fluid -->
+                </div><!-- Modal content -->
+            
+            </div> <!-- end The Modal -->
+
+        </div> <!-- end of the row -->
+    </div> <!-- end container-fluid -->
 
 
 
