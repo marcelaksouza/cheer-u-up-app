@@ -1,8 +1,12 @@
+
 let searchBtn = document.getElementById('searchBtn');
 let displayDiv = document.getElementById('display');
-
 //fetch request to search the kitties
 searchBtn.addEventListener("click", evt => {
+    
+    
+    let quotesDiv = document.getElementById('quotes');
+    
     //hide jokes div
     hideJokesDisplay();
 
@@ -11,8 +15,9 @@ searchBtn.addEventListener("click", evt => {
     let breedId = document.querySelector('#catBreeds').value;
     let qtd = document.querySelector('#catQtd').defaultValue = "1";
     qtd = document.querySelector('#catQtd').value;
-  
-    let query = "limit=" + qtd + "&category_ids=" + categoryId +"&breed_id=" + breedId;
+     
+    if(qtd <= "100"){
+        let query = "limit=" + qtd + "&category_ids=" + categoryId +"&breed_id=" + breedId;
     console.log(query);
 
     //get images
@@ -21,13 +26,21 @@ searchBtn.addEventListener("click", evt => {
         .then(cats => {
             if(cats.length == 0){
                 //message if there is no match for search
-                displayDiv.innerHTML = `<p style="color:red;">Oh no... There no is kitties that match your criteria.. Try leave one of the feilds blank and try again. 
+                randomCat();
+                quotesDiv.innerHTML = `<p style="color:red;">Oh no... There is no kitties that match your criteria.. Try leave one of the feilds blank and try again. 
                 Best luck next time. </p>`;
             }
             else{ 
                 //else build the cards using the cats array
                 buildCardDiv(cats);}
         }).catch((err) => console.log(err))
+    }
+    else{
+        randomCat();
+        quotesDiv.innerHTML = `<p style="color:red;">1 to 100 I said... try again :P </p>`;
+    }
+
+    
 });
 
 
