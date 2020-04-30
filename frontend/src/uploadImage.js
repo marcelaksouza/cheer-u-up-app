@@ -1,3 +1,6 @@
+//couln not make it work
+
+
 // //reference https://muffinman.io/uploading-files-using-fetch-multipart-form-data/
 
 // const uploadButton = document.getElementById('uploadBtn') ;

@@ -1,10 +1,15 @@
 //reference https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
+
 function randomCat() {
     let quotesDiv = document.getElementById('quotes');
+
+    //if the div is hidden then unhide
     if(quotesDiv.style.display == "none"){
         unhideJokesDisplay();
     }
+
     let imageDiv = document.getElementById('display');
+
 
     const option = {
         method: 'GET',
@@ -13,7 +18,7 @@ function randomCat() {
             'x-api-key': "5e4b134f-fea1-4c4f-be86-2aabae37c132"
         },
     }
-
+    //fetch a ramdon image
     fetch('https://api.thecatapi.com/v1/images/search?', option)
         .then(res => res.json())
         .then(cats => {
@@ -33,7 +38,7 @@ function randomJoke() {
             'x-api-key': "5e4b134f-fea1-4c4f-be86-2aabae37c132"
         },
     }
-    
+    //fetch a random joke
     fetch('https://geek-jokes.sameerkumar.website/api?format=json',option)
         .then(res => res.json())
         .then(jokes => {
@@ -41,8 +46,8 @@ function randomJoke() {
         });
 }
 
+//random buttom action
 let quotesButton = document.getElementsByClassName('randomBtn');
-
 Array.from(quotesButton).forEach(function(btn) {
     btn.addEventListener('click', evt => {
         randomCat();

@@ -1,4 +1,4 @@
-let span = document.getElementsByClassName("close")[0];
+//reference: https://www.w3schools.com/howto/howto_css_modals.asp
 
 const openModalfunction = (id) => {
     // Get the modal
@@ -6,7 +6,7 @@ const openModalfunction = (id) => {
     modal.style.display = "block";
 
     // Get the <span> element that closes the modal
-    
+    let span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
@@ -19,7 +19,7 @@ const openModalfunction = (id) => {
             modal.style.display = "none";
         }
     }
- 
+    //populate with the pic of the kittie
     getOneById(id);
 };
     

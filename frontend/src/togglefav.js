@@ -1,4 +1,5 @@
 
+//toggle favorite btn
 const favoriteFunc = (id) => {
 
     //check if is favorite

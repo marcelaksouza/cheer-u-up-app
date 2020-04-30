@@ -1,7 +1,7 @@
 //reference: https://www.tutorialrepublic.com/faq/how-to-check-if-an-array-includes-an-object-in-javascript.php
 //reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise
 
-//return a promise if the id belongs to the the favorite list return the object and isfavorite=true
+//return a promise. If the id belongs to the the favorite list then return the favorite object and isfavorite=true
 //if is not in the list return a object isfavorite=false
 const isFavorite = (id) => new Promise((resolve, reject) => {
     const option = {
@@ -16,7 +16,7 @@ const isFavorite = (id) => new Promise((resolve, reject) => {
         .then(res => res.json())
         .then((allFavorities) => {
             allFavorities.some(favorite => {
-                //if the favorite list has the id delete the image
+                //if the favorite list has the id
                 if (favorite.image_id == id) {
                     return resolve(Object.assign(favorite, { "isFavorite": "true" }));
                 }

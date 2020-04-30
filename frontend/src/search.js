@@ -1,10 +1,12 @@
 let searchBtn = document.getElementById('searchBtn');
 let displayDiv = document.getElementById('display');
 
-
+//fetch request to search the kitties
 searchBtn.addEventListener("click", evt => {
-    //hide jokes 
+    //hide jokes div
     hideJokesDisplay();
+
+    //to build the query
     let categoryId = document.querySelector('#catCategory').value;
     let breedId = document.querySelector('#catBreeds').value;
     let qtd = document.querySelector('#catQtd').defaultValue = "1";
@@ -18,14 +20,13 @@ searchBtn.addEventListener("click", evt => {
         .then(res => res.json())
         .then(cats => {
             if(cats.length == 0){
-                displayDiv.innerHTML = `<p style="color:red;">Oh no... There is kitties that match your criteria.. Try leave one of the feilds blank and try again. 
+                //message if there is no match for search
+                displayDiv.innerHTML = `<p style="color:red;">Oh no... There no is kitties that match your criteria.. Try leave one of the feilds blank and try again. 
                 Best luck next time. </p>`;
-                
             }
             else{ 
+                //else build the cards using the cats array
                 buildCardDiv(cats);}
-           
-
         }).catch((err) => console.log(err))
 });
 

@@ -1,3 +1,4 @@
+//load all the favorites
 let favoriteBtn = document.getElementById('favoriteBtn');
 favoriteBtn.addEventListener("click", evt => {
 
@@ -16,8 +17,8 @@ favoriteBtn.addEventListener("click", evt => {
     .then(favorites => { 
         let catDisplay = "";
         catDisplay += `<div class="card-columns">`;
+        //create the cards
         favorites.forEach(favorite => {
-
             catDisplay += `<div class="card">`;
             catDisplay += `<img src=" ${favorite.image.url}" class="img-fluid" alt="kitty pic" />`;
             catDisplay += `<div id="heartDivId-${favorite.image.id}" class="heart">`;

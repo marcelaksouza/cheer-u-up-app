@@ -1,4 +1,4 @@
-//dropdown manu was adapted using is code reference 
+//dropdown manu was adapted using this code reference 
 //https://www.codebyamir.com/blog/populate-a-select-dropdown-list-with-json
 let dropdownCatCategory= document.getElementById('catCategory');
 let dropdownCatBreed= document.getElementById('catBreeds');
@@ -9,14 +9,14 @@ let dropdownCatBreed= document.getElementById('catBreeds');
             'x-api-key': "5e4b134f-fea1-4c4f-be86-2aabae37c132"
         }
     }
-    //dropdown cat's category
+    //fetch cat's category
     fetch('https://api.thecatapi.com/v1/categories', requestOptions)
         .then(res => res.json())
         .then(categories => {
             createDropDownOptions(categories, dropdownCatCategory);
         }).catch((err) => console.log(err));
     
-    //dropdown cat's breed 
+    //fetch cat's breed 
     fetch('https://api.thecatapi.com/v1/breeds', requestOptions)
         .then(res => res.json())
         .then(breeds => {
@@ -25,8 +25,9 @@ let dropdownCatBreed= document.getElementById('catBreeds');
 
 
 
- //add all cats pics to
+ //add all cats pics to dropdown
 const createDropDownOptions = (categories, dropdown) => {
+    //create default value of empty string
     let defaultOption = document.createElement('option');
     defaultOption.text = ' ';
     dropdown.add(defaultOption);

@@ -13,10 +13,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-    <!-- end Bootstrap CSS -->
+  
     <!-- start load CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- end load CSS -->
+   
 
     <!-- start JS -->
     <script defer src="src/helpers/isFavorite.js" charset="utf-8"></script>
@@ -29,7 +29,7 @@
     <script defer src="src/randonBtn.js" charset="utf-8"></script>
     <script defer src="src/search.js" charset="utf-8"></script>
     <script defer src="src/togglefav.js" charset="utf-8"></script>
-    <script defer src="src/uploadImage.js" charset="utf-8"></script>
+    <!-- <script defer src="src/uploadImage.js" charset="utf-8"></script> -->
     <script defer src="src/randomJoke.js" charset="utf-8"></script>
     <script defer src="src/index.js" charset="utf-8"></script>
     <script defer src="src/helpers/hideJokes.js" charset="utf-8"></script>
@@ -42,7 +42,7 @@
 
 <body>
 
-    <!-- start Image and text in navbar -->
+    <!-- Image and text in navbar -->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="img/kitty.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -50,10 +50,10 @@
         </a>
     </nav>
     <br>
-    <!-- end Image and text in navbar -->
+    
 
     <!-- start container-fluid  -->
-    <div class="container-fluid">
+    <div class="container-fluid page-wrap">
         <div class="row text-center">
             <div class="col-sm-3 ">
                 <!-- Favorites -->
@@ -72,15 +72,18 @@
                 </form>
                 <br>
                 <p>And</p>
-                <!-- dropdown button -->
-                <form id="">
+                
+                <!-- dropdowns -->
+                <form>
+
                     <!-- Cats Categories dropdown  -->
                     <label for="">Cats Categories</label>
                     <select class="form-control" id="catCategory">
                     </select>
                     <br>
                     <p>Or</p>
-                     <!-- Cats breeds dropdown  -->
+                    
+                    <!-- Cats breeds dropdown  -->
                     <label for="">Cats Breeds</label>
                     <select class="form-control" id="catBreeds">
                     </select>
@@ -90,7 +93,7 @@
                     <br>
                     <hr>
                     
-
+                    <!-- kitties and jokes -->
                     <label for="">Random kitties and jokes</label>
                     <button type="button" style="display: block;" class="btn btn-primary full-lenght-btn randomBtn" id="searchBtn">Random</button>
                 </form>
@@ -114,14 +117,14 @@
             <!-- end upload file -->
             </div> <!-- end of the form collun -->
 
-            <!--  display div -  new collun --->
+            <!--  display div - new collun --->
             <div class="col-sm-9 ">
                 <div id="warning"></div>
                 <div id="display"></div>
                 <div id="quotes"></div>
                 
             </div> 
-            <!-- end isplay div  -->
+        
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -130,11 +133,8 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <div id="modal-content"></div>
-                    <hr>
-                    <div id="modal-form"></div>
-                </div><!-- Modal content -->
-            
-            </div> <!-- end The Modal -->
+                </div>
+            </div> 
 
         </div> <!-- end of the row -->
     </div> <!-- end container-fluid -->
@@ -151,15 +151,4 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
-
-<!-- Footer 
- <footer class="page-footer font-small blue">
-     Copyright 
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-    </div>
-     Copyright 
-</footer> 
-Footer -->
-
 </html>
