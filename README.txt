@@ -3,6 +3,7 @@
 Cheer u up App is a web service where you can enjoy some geek joks along with a lovely kitty picture.
 I use the cats API - https://docs.thecatapi.com/ along with the Jokes API https://github.com/sameerkumar18/geek-joke-api to develop this service 
 
+
 Below I describe the application functionalities:
 - Default behaivor : Fetch a random cat and a random joke
 - Favorite button: Fetch all favorites
@@ -12,3 +13,6 @@ Below I describe the application functionalities:
 - Search: create a query to retrive a list of selected cats
 - Modal: You can click into a pic and see the pic with a bigger size I am using Fetch to select one kittie
 
+Application has no backend and uses only javascript
+
+Application is currently runing on https://floating-caverns-62408.herokuapp.com/
